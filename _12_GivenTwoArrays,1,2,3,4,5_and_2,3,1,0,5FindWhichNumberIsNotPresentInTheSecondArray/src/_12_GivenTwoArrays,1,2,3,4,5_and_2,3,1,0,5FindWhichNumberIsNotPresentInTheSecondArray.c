@@ -14,10 +14,62 @@
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+int main(){
+    int i,j , arr1[100] , arr2[100] ,arr3[100],k, l, n, temp1, temp2;
+    for (i = 0; i<5; i++){
+        scanf("%d", &arr1[i]);
+    }
+        for (i = 0; i<5; i++){
+        scanf("%d", &arr2[i]);
+    }
+    ///2 1 4 3 5
+   /// 1 2 4 5 6
+///arr1 sort
+    for (i = 1; i<5; i++){
+        temp1 = arr1[i];
+        j = i-1;
+            while(temp1<arr1[j] && j>=0){
+               arr1[j+1] =  arr1[j];
+               --j;
+            }
+            arr1[j+1] = temp1 ;
+    }
+///arr2 sort
+    for (i = 1; i<5; i++){
+        temp2 = arr2[i];
+        j = i-1;
+            while(temp2<arr2[j] && j>=0){
+               arr2[j+1] =  arr2[j];
+               --j;
+            }
+            arr2[j+1] = temp2 ;
+    }
+///print arr1
+    for (i = 0; i<5; i++){
+        printf("%d ", arr1[i]);
+    }
+    printf("\n");
+///print arr2
+    for (i = 0; i<5; i++){
+        printf("%d ", arr2[i]);
+    }
+    printf("\n");
+    printf("\n");
+    printf("\n");
+    /// test section
+    for (i= 0; i<5 ; i++){/// 1  2  3  4  5
+            for (j = 0 ;j<5 ; j++){
+                    if(arr1[i] == arr2[j])
 
-int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+                    printf("%d ", arr2[j]);
+            }
+            printf("\n");
+    }
+///print arr3
+//printf("\n");
+//printf("arr3 is  :");
+//    for (i = 0; i<5; i++){
+//        printf("%d ", arr2[i]);
+//    }
 }

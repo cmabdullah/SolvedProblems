@@ -19,7 +19,7 @@ int garr[100];
 int grrs[100];
 int  count = 0 ;
 int main(){
-    int i,j , arr1[100] , arr2[100] ,arr3[100],k, l, n, temp1, temp2;
+    int i,j , arr1[100] , arr2[100] ,arr3[100],k, l, n, temp1, temp2, miss;
     for (i = 0; i<5; i++){
         scanf("%d", &arr1[i]);
     }
@@ -58,8 +58,7 @@ int main(){
         printf("%d ", arr2[i]);
     }
     printf("\n");
-    printf("\n");
-    printf("\n");
+
     /// test section
     for (i= 0; i<5 ; i++){/// 1  2  3  4  5
             for (j = 0 ;j<5 ; j++){
@@ -67,7 +66,7 @@ int main(){
                         garr[j] = arr2[j] ;
                ///     printf("%d ", arr2[j]);
             }
-            printf("\n");
+       //     printf("\n");
     }
   ///count increment
      for (i= 0; i<5 ; i++){/// 1  2  3  4  5
@@ -76,7 +75,7 @@ int main(){
                         count++;
                ///     printf("%d ", arr2[j]);
             }
-            printf("\n");
+        //    printf("\n");
     }
 
 
@@ -87,19 +86,27 @@ printf("garr is  :");
         printf("%d ", garr[i]);
     }
 
+    printf("\n arr2 is  : ");
+    for (i = 0; i<5 ; i++){
+        printf("%d ", arr2[i]);
+    }
 
 
-//
-//   /// test arr2 and garr
-//
-//        for (i= 0; i<count ; i++){/// 1  2  3  4  5
-//            for (j = 0 ;j<5 ; j++){
-//                    if(garr[i] != arr2[j])
-//                    printf("%d ", arr2[j]);
-//            }
-//            printf("\n");
-//    }
-//
+printf("\nCompare part :");
+//new part
+for(i  = 0; i<4 ; i++){
+	for (j = 0; j< count-1; j++){
+		if (arr2[i]== garr[j]){
+			miss = 1;
+							break ;
+		}
+		else
+						j++;
+	}
+	if (miss == 0)
+				printf("%d ", arr2[i]);
+}
+
 
 
 //
@@ -109,8 +116,25 @@ printf("garr is  :");
 //            printf("%d", grrs[j]);
 //            }
 
+/*
+#include<stdio.h>
+int main(){
+	int arr1[4] = {2,1,3,4} ;
+	int arr2[4]= {3,4,6};
+	int i,j, length = 3, miss = 0;
+	//i = 0;
+	for(i  = 0; i<length ; i++){
+		for (j = 0; j<length-1; j++){
+			if (arr1[i]== arr2[j]){
+				miss = 1;
+								break ;
+			}
+			else
+							j++;
+		}
+		if (miss == 0)
+					printf("%d ", arr1[i]);
+	}
 
-
-
-
+	*/
 }

@@ -15,6 +15,9 @@
  */
 
 #include<stdio.h>
+int garr[100];
+int grrs[100];
+int  count = 0 ;
 int main(){
     int i,j , arr1[100] , arr2[100] ,arr3[100],k, l, n, temp1, temp2;
     for (i = 0; i<5; i++){
@@ -61,15 +64,53 @@ int main(){
     for (i= 0; i<5 ; i++){/// 1  2  3  4  5
             for (j = 0 ;j<5 ; j++){
                     if(arr1[i] == arr2[j])
-
-                    printf("%d ", arr2[j]);
+                        garr[j] = arr2[j] ;
+               ///     printf("%d ", arr2[j]);
             }
             printf("\n");
     }
+  ///count increment
+     for (i= 0; i<5 ; i++){/// 1  2  3  4  5
+            for (j = 0 ;j<5 ; j++){
+                    if(arr1[i] == arr2[j])
+                        count++;
+               ///     printf("%d ", arr2[j]);
+            }
+            printf("\n");
+    }
+
+
 ///print arr3
-//printf("\n");
-//printf("arr3 is  :");
-//    for (i = 0; i<5; i++){
-//        printf("%d ", arr2[i]);
+printf("\n");
+printf("garr is  :");
+    for (i = 0; i<count; i++){
+        printf("%d ", garr[i]);
+    }
+
+
+
+//
+//   /// test arr2 and garr
+//
+//        for (i= 0; i<count ; i++){/// 1  2  3  4  5
+//            for (j = 0 ;j<5 ; j++){
+//                    if(garr[i] != arr2[j])
+//                    printf("%d ", arr2[j]);
+//            }
+//            printf("\n");
 //    }
+//
+
+
+//
+////print
+//
+//            for (j = 0 ;j<5 ; j++){
+//            printf("%d", grrs[j]);
+//            }
+
+
+
+
+
 }

@@ -1,30 +1,33 @@
 /*
  ============================================================================
- Name        : test.c
+ Name        : ArmstrongNumber.c
  Author      : AbdullahKhan
  Version     :
  Copyright   : OpenSource
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
-
+//Following program printing all Armstrong number except 153.but //why
+// i can not fix it.needed help
 #include<stdio.h>
+#include<math.h>
 int main(){
-	int garr[2] = {2,1} ;
-	int arr2[5]= {3,4,6, 2, 8};
-	int i,j, length = 4, miss = 0;
-	//i = 0;
-	for(i  = 0; i<4 ; i++){
-		for (j = 0; j< 1; j++){
-			if (arr2[i]== garr[j]){
-				miss = 1;
-								break ;
+	int n=1,number,count,sum ;
+		while(n<10000){
+		number=n ;
+		count=0;
+		sum=0 ;
+			while(number){ // finding the length of the number
+			number/=10 ;
+			count++;// count is for the power
 			}
-			else
-							j++;
+		number=n ;
+			while(number){
+			sum=sum+pow((number%10),count);
+			number=number/10 ;
+			}
+		if(sum==n) printf("%d \n",n) ;
+		n++ ;
 		}
-		if (miss == 0)
-					printf("%d ", arr2[i]);
-	}
-
+	return 0;
 }

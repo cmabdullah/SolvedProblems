@@ -9,18 +9,42 @@
  */
 //Following program printing all Armstrong number except 153.but //why
 // i can not fix it.needed help
-int main() {
-	int cnt = 1, tc;
-	int l,w,h;
 
-	scanf("%d",&tc);
-	while(tc--){
-		scanf("%d %d %d",&l,&w,&h);
+#include <stdio.h>
+int main(void) {
+    int n1, n2, n3;
 
-		printf("Case %d: ",cnt++);
-		if(l<=20 && w<=20 && h<=20) printf("good\n");
-		else printf("bad\n");
-	}
-
-	return 0;
+      int mid;
+      if( n1 > n2 )   {
+              if( n3 > n2)
+                    {
+                            if( n3 < n1 )
+                                    mid = n3;
+                            printf( "%d  ", mid );
+                            else
+                                    mid = n1;
+                            printf( "%d  ", mid );
+                    }
+             else {
+                    mid = n2;
+                    printf( "%d  ", mid );
+            }
+     }
+     else {
+            if( n2 > n3 )
+             {
+                    if ( n1 > n3)
+                      mid = n1;
+                    printf( "%d  ", mid );
+                    else
+                    mid = n3;
+                    printf( "%d  ", mid );
+             }
+            else{
+                    mid = n2;
+                    printf( "%d  ", mid );
+            }
+    }
+    return mid ;
 }
+

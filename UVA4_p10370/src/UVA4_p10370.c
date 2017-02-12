@@ -12,8 +12,8 @@
 int main(){
 	int i , T,j,arr[100], n, count, sum;
 	float x   , avg;
-	scanf("%d",&T);
-	if (T<=1000){
+
+	while(scanf("%d",&T)==1){
 		for (j=1;j<=T;j++){
 			sum = 0;
 			avg = 0;
@@ -21,16 +21,16 @@ int main(){
 		scanf("%d",&n);
 		for (i = 0; i<n ;i++){
 			scanf("%d",&arr[i]);
-		}
-		for (i = 0; i<n ;i++){
 			sum = sum + arr[i];
+
 		}
+
 		avg = sum/n;
 		for (i = 0; i<n ;i++){
 			if (arr[i]>avg)
 				count++;
 		}
-		x = (100*count)/n;
+		x = (100*(float)count) /(float)n;
 		printf("%.3f%%\n",x);
 		}
 	}

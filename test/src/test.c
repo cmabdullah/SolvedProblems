@@ -12,16 +12,9 @@
 
 #include<stdio.h>
 int main(){
-	int i, j, sum=0, n;
-	scanf("%d",&n);
-	for(int i=1;i<=n;i++)
-	{
-		for(int j=i;j<n;j++)
-		{
-			sum+=(i+j);
-		}
-	}
-	printf("%d", sum);
+	int x = 10;
+
+	printf("hi %d",x);
 }
 
 

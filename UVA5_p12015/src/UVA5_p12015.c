@@ -8,7 +8,7 @@
  http://stackoverflow.com/questions/22906049/how-to-input-multiple-strings-followed-by-newline
  ============================================================================
  */
-
+/******
 #include<stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -18,7 +18,7 @@
 int arrG[6];
 int arrtemp[6];
 int main(){
-	/*** this code is working fine.........**/
+	// this code is working fine.........
     char** linux_destro ;
 
     int arr[10];// = {1,4,3,2,2,4};
@@ -27,7 +27,7 @@ int main(){
 		for (k=1;k<=T;k++){//test case start
     	count = 0;
     	p = 0;
-    linux_destro = malloc(50 * sizeof(char*));
+    linux_destro = malloc(102 * sizeof(char*));
     for (i = 0; i < 10; i++) {
     	linux_destro[i] = malloc((MAX_STRING_SIZE + 1) * sizeof(char));
         memset(	linux_destro[i], 0, MAX_STRING_SIZE + 1);
@@ -35,18 +35,11 @@ int main(){
     for (i = 0; i<10;i++){
     	scanf("%s%d",linux_destro[i], &arr[i]);
     }
-/**
-    for ( i =0 ;i<6; i++){
-        printf("%s %d\n", linux_destro[i],arr[i]);
-    }
-    */
+
 
 
 //free block
 
-
-
-    /****/
 
 	///array calculation part
 
@@ -130,3 +123,39 @@ int main(){
 	    return 0;
 
 }
+///progtam is working fine
+
+******/
+
+
+#include<stdio.h>
+
+static char s[10][100];
+static unsigned r[10];
+
+static unsigned c, n, max, i;
+
+int main(){
+
+    scanf("%u", &n);
+
+    while(n--){
+        scanf("%s%u", &s[0], &r[0]);
+        max = r[0];
+
+        for(i = 1; i < 10; ++i){
+            scanf("%s%u", &s[i], &r[i]);
+            if(r[i] > max)
+                max = r[i];
+        }
+
+        printf("Case #%u:\n", ++c);
+        for(i = 0; i < 10; ++i){
+            if(r[i] == max)
+                printf("%s\n", s[i]);
+        }
+    }
+    return 0;
+}
+
+

@@ -10,30 +10,33 @@
 
 #include <stdio.h>
 int main(void) {
-	int i , j , k = 1, Amplitude , Frequency,T,ff;
-	scanf("%d",&T);
+	long long int i , j ,n=1,t=1, k = 1, Amplitude , Frequency,T,ff;
+	scanf("%lld",&T);
 	printf("\n");
 	for (i=1;i<=T;i++){
-		scanf("%d",&Amplitude);
-		scanf("%d",&Frequency);
+		scanf("%lld",&Amplitude);
+		scanf("%lld",&Frequency);
 		for(ff = 1;ff<=Frequency;ff++){
 			for (i = 0;i<Amplitude;i++){
 				for (j = 0;j<=i;j++){
-					printf("%d",k);
+					printf("%lld",i+1);
 				}
-				k++;
+		//		k++;
 				printf("\n");
 			}
-			k = k-2;
-			printf("");
-			for (i = 0;i<Amplitude;i++){
-					for (j = i;j<(Amplitude-1);j++){
-						printf("%d", k);
+		//	k = k-2;
+//printf("");
+			for (i = Amplitude;i>1;i--){
+					for (j = i-1;j>0;j--){
+						printf("%lld",i-1);
 					}
-					k--;
+			//		k--;
 					printf("\n");
 				}
-			k = k+2;
+	//		k = k+2;
 		}
+        if(t!=n-1 || ff!= Frequency-1)
+            printf("\n");
 	}
+	return 0;
 }

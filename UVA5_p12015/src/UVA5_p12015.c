@@ -127,8 +127,12 @@ int main(){
 
 ******/
 
+/*****
 
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
 
 static char s[10][100];
 static unsigned r[10];
@@ -158,4 +162,58 @@ int main(){
     return 0;
 }
 
+
+//this procedure is also nice
+/****
+ * #include<stdio.h>
+
+int main()
+{
+    int t, i, j, k, max, value[15];
+    char url[12][105];
+    while(scanf("%d",&t)==1)
+    {
+        for(i=1;i<=t;i++)
+        {
+            max=0;
+            for(j=1;j<=10;j++)
+            {
+                scanf("%s%d",&url[j], &value[j]);
+                if(value[j]>max)
+                    max=value[j];
+            }
+            printf("Case #%d:\n",i);
+            for(k=1;k<=10;k++)
+            {
+                if(max==value[k])
+                    printf("%s\n",url[k]);
+            }
+        }
+    }
+    return 0;
+}
+ */
+#include<stdio.h>
+
+int main()
+{
+    int n,i;
+    char str[20];
+
+    scanf("%d",&n); //how many string
+
+    //input each string
+    for(i=0;i<n;i++)
+    {
+        scanf("%s",&str[i]);
+    }
+
+    //display each string
+    for(i=0;i<n;i++)
+    {
+        printf("%s",str[i]);
+    }
+
+    return 0;
+}
 

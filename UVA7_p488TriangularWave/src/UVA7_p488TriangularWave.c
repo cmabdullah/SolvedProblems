@@ -12,17 +12,23 @@
 int main(void) {
 	long long int f,i,j,t,A,F,T;
 	scanf("%lld",&T);
-	for(t=1;t<=T;t++){
+	for(t=1;t<=T;t++)
+	{
 		scanf("%lld %lld",&A,&F);
-		for(f=1;f<=F;f++){
-			for(i=0;i<A;i++){
-				for (j=0;j<=i;j++){
+		for(f=1;f<=F;f++)
+		{
+			for(i=0;i<A;i++)
+			{
+				for (j=0;j<=i;j++)
+				{
 					printf("%lld",i+1);
 				}
 				printf("\n");
 			}
-			for(i=A;i>1;i--){
-				for(j=(i-1);j>0;j--){
+			for(i=A;i>1;i--)
+			{
+				for(j=(i-1);j>0;j--)
+				{
 					printf("%lld",i-1);
 				}
 				printf("\n");

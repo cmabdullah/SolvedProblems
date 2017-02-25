@@ -6,6 +6,7 @@
  Copyright   : OpenSource
  Description : Hello World in C, Ansi-style
  http://sojolewu6.blogspot.com/2016/06/575-skew-binary-solution-hints.html
+ http://ruhinraihan.blogspot.com/2012/05/uva-575-skew-binary-solution.html
  ============================================================================
  */
 
@@ -42,15 +43,24 @@ int main(){
 
 **/
 #include<stdio.h>
-#include<math.h>
-#include<stdlib.h>
 #include<string.h>
+#include<stdlib.h>
+#include<math.h>
 int main(){
-    char name[20];
-    char ab[] = "Abdullah" ;
-    //gets(name);/// you can take any string like "C M Abdullah Khan" , when hit enter string will end.
-
-    printf("My name is :%s\n",ab);
-
-
+	long int n,i,sum,num,b;
+	char s[100];
+	while(gets(s)){
+	sum=0;
+	n=strlen(s);
+	for(i=0;i<n;i++){
+		num=s[i]-'0';
+		b=num*(pow(2,n-i)-1);
+		sum=sum+b;
+		}
+	if(sum==0)
+		break;
+	printf("%ld\n",sum);
+	}
+return 0;
 }
+

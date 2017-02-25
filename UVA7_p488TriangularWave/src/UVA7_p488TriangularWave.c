@@ -7,7 +7,6 @@
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
-
 #include <stdio.h>
 int main(void) {
 	long long int f,i,j,t,A,F,T;

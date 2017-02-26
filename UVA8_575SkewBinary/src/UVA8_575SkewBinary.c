@@ -48,8 +48,9 @@ int main(){
 #include<math.h>
 int main(){
 	long int n,i,sum,num,b;
-	char s[100];
-	while(gets(s)){
+	char s[1000];
+	while(1){
+	gets(s);
 	sum=0;
 	n=strlen(s);
 	for(i=0;i<n;i++){

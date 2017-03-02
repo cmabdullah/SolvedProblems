@@ -13,7 +13,8 @@
 #include<stdio.h>
 int main(){
     char array[20];
+  //  fopen("array.txt","r", stdin);
     while(gets(array))
-    puts(array);
+    printf("%s\n",array);
     return 0;
 }

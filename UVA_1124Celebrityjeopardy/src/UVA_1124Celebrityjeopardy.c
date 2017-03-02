@@ -2,20 +2,18 @@
  ============================================================================
  Name        : UVA_1124Celebrityjeopardy.c
  Author      : AbdullahKhan
- Version     :
+ Version     : 00.1
  Copyright   : OpenSource
  Description : Hello World in C, Ansi-style
+ Compiler    : Eclipse CDT IDE
+ Referrence  :
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-//#include <cstdio>
+#include<stdio.h>
 int main(){
-    char s[12800];
-    while(gets(s)){
-    	printf("%s\n",s);
-    }
+    char array[20];
+    while(gets(array))
+    puts(array);
     return 0;
 }

@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 int main(){
     float  b ,c, val[100], sum = 0, x ,y, l;
      int a , i, j, k = 0,  arr[100], range;
@@ -19,6 +20,7 @@ int main(){
 if (sum == l ){
     printf("Match") ;
 }
+//if end
 else
     printf("Unmatch");
 }

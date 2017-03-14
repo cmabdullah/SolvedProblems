@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : test.c
+ Name        : UVA13_11044SearchingForNessy.c
  Author      : AbdullahKhan
  Version     :
  Copyright   : OpenSource
@@ -12,6 +12,11 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("test"); /* prints test */
-	return EXIT_SUCCESS;
+	int m,n, T, s;
+	scanf("%d",&T);
+	while(T--){
+	scanf("%d %d",&n, &m);
+	s =  ((m/3)*(n/3));
+	printf("%d\n", s);
+	}
 }

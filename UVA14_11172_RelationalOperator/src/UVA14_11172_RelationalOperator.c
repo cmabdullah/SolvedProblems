@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : UVA13_11044SearchingForNessy.c
+ Name        : UVA14_11172_RelationalOperator.c
  Author      : AbdullahKhan
  Version     :
  Copyright   : OpenSource
@@ -10,11 +10,17 @@
 
 #include <stdio.h>
 int main(void) {
-	int m,n, T, s;
+	int n1,n2, T;
 	scanf("%d",&T);
 	while(T--){
-	scanf("%d %d",&n, &m);
-	s =  ((m/3)*(n/3));
-	printf("%d\n", s);
+	scanf("%d %d",&n1,&n2);
+	if (n1<n2){
+		printf("<\n");
+	}
+	else if (n1>n2){
+		printf(">\n");
+	}
+	else
+		printf("=\n");
 	}
 }

@@ -20,7 +20,7 @@ int main(void) {
 		if(x==5){
 			printf("3\n");
 		}
-		else if ((name[0]=='o'&&name[1]=='n' )||(name[0]=='o'&&name[2]=='e') ||(name[1]=='n' &&name[2]=='e')){
+		else if ((name[0]=='o'&&name[1]=='n')||(name[0]=='o'&&name[2]=='e')||(name[1]=='n' &&name[2]=='e')){
 			printf("1\n");
 		}
 		else{

@@ -9,9 +9,24 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
-
 int main(void) {
-	puts("12279EmoogleBalance"); /* prints 12279EmoogleBalance */
-	return EXIT_SUCCESS;
+	int n,val,j = 0;
+	while(scanf("%d",&n)== 1){
+    if (n==0)
+    break;
+	int tr=0,par = 0;
+		 for(int i=0;i<n;i++){
+	         scanf("%d",&val);
+	         if (val==0){
+	         tr++;
+	         }
+	         else{
+	         par++;
+		 	}
+		 }
+		j++;
+	 printf("Case %d: %d\n",j,(par-tr));
+	 
+	}
+	return 0;
 }

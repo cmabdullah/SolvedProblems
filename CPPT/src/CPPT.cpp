@@ -6,24 +6,37 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <iostream>
-//#include<bits/stdc++.h>
+/*  Example Program For Simple Example Program Of Constructor Overloading In C++
+    little drops @ thiyagaraaj.com
+
+    Coded By:THIYAGARAAJ MP             */
+
+#include<iostream>
+#define pi 3.14
 using namespace std;
-/*
-    *
-    * Prosen Ghosh
-    * American International University - Bangladesh (AIUB)
-    *
-*/
-int main(){
-
-    int T,ar[3];
-    cin >> T;
-    for(int t = 1; t <= T; t++){
-
-        cin >> ar[0] >> ar[1] >> ar[2];
-        sort(ar,ar+3);
-        cout << "Case " << t << ": " << ar[1] << endl;
+class Area{
+    // Variable Declaration
+    int a,b;
+    public:
+    //Constructor wuithout Argument
+    Area(){
+    // Assign Values In Constructor
+    a=50;
+    b=100;
+    cout<<a+b<<endl;
     }
-    return 0;
+    //Constructor with Argument
+    Area(float x,float y)            {
+    // Assign Values In Constructor
+    a=x;
+    b=y;
+    cout<<"\n"<<a*b*pi;
+    }
+};
+
+int main(){
+	Area Object2;
+	Area Object(10,20);
+        return 0;
 }
+

@@ -9,9 +9,23 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
-
+#include <string.h>
 int main(void) {
-	puts("UVA18_12289OneTwoThree"); /* prints UVA18_12289OneTwoThree */
-	return EXIT_SUCCESS;
+	char name[6];
+	int x, T;
+	scanf("%d",&T);
+	while(T--){
+		scanf("%s",name);
+		x = strlen(name);
+		if(x==5){
+			printf("3\n");
+		}
+		else if ((name[0]=='o'&&name[1]=='n' )||(name[0]=='o'&&name[2]=='e') ||(name[1]=='n' &&name[2]=='e')){
+			printf("1\n");
+		}
+		else{
+			printf("2\n");
+		}
+	}
+	return 0;
 }

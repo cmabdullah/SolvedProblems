@@ -17,5 +17,6 @@ int main(void){
 	scanf("%d", &K);
 	amount = amount+K;
 	printf("report %d\n",amount);
+	T--;
 	}
 }

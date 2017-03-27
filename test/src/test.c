@@ -22,8 +22,8 @@ int main(void) {
 
 
 
-		 if (U[0] == '*')
-			 break;
+		if (U[0] == '*')
+		break;
 		if (strcmp(U,H) != 0){
 			printf("Case %d: Hajj-e-Asghar\n",i);
 		}

@@ -1,1 +1,5 @@
+00621
 thoroughly = পুঙ্খানুপুঙ্খভাবে
+encrypted = এনক্রিপ্ট করা
+completion = পরিপূরণ
+constitutes = গঠন

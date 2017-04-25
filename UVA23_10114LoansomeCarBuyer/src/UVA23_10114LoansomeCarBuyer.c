@@ -8,13 +8,9 @@
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 
-int main(void) {
-	puts("10114LoansomeCarBuyer.pdf"); /* prints 10114LoansomeCarBuyer.pdf */
-	return EXIT_SUCCESS;
-}
+
+
 /**
  *
  *
@@ -24,15 +20,23 @@ int main(void) {
  *
 
 
-#include<cstdio>
+UVA 10114: Loansome care buyer
 
-using namespace std;
+Process
+Simulate the process described and you should be good.
+Note that the monthly payment is the loan amount / duration,
+and that it starts on the first month. Depending on how you code you solution,
+you may need to check for a case where 0 months is the output
+(when the initial depreciation of the car is greater than the loan amount).
+Also, note that the output for 1 is not plural – “1 month” v “4 months.”
+*/
 
+#include <stdio.h>
 int duration, months, a;
 float down, amount, b;
 float depr[110];
 
-void simul(int month, float car, float loan, float payment) {
+void func(int month, float car, float loan, float payment) {
     loan -= payment;
     car -= depr[month] * car;
 
@@ -40,7 +44,7 @@ void simul(int month, float car, float loan, float payment) {
         printf(month == 1? "1 month\n" : "%d months\n", month);
         return;
     }
-    simul(month + 1, car, loan, payment);
+    func(month + 1, car, loan, payment);
 }
 
 int main() {
@@ -58,34 +62,10 @@ int main() {
 
         float car = (amount + down) * (1.0 - depr[0]);
         if(amount < car) printf("0 months\n");
-        else simul(1, car, amount, amount / duration);
+        else func(1, car, amount, amount / duration);
     }
 }
-input
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
+/*
 
 30 500.0 15000.0 3
 0 .10

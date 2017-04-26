@@ -7,11 +7,21 @@
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
-
+//The number of animals is not needed.
+//Simply sum all the multiplications of the farmyard in square meters by the
+//environment-friendliness and we're done.
 #include <stdio.h>
-#include <stdlib.h>
-
 int main(void) {
-	puts("10300 - Ecological Premium"); /* prints 10300 - Ecological Premium */
-	return EXIT_SUCCESS;
+	int i,a,b,c,T,Ca,ans;
+	scanf("%d",&T);
+	while(T--){
+		scanf("%d",&Ca);
+		ans = 0;
+		for(i = 0;i<Ca;i++){
+
+			scanf("%d%d%d",&a,&b,&c);
+			ans = ans +(a*c);
+		}
+		printf("%d\n", ans);
+	}
 }

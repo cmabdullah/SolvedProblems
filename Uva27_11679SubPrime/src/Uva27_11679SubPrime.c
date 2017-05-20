@@ -12,6 +12,6 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("Uva27_11679SubPrime"); /* prints Uva27_11679SubPrime */
+	puts("UnderConstruction"); /* prints Uva27_11679SubPrime */
 	return EXIT_SUCCESS;
 }

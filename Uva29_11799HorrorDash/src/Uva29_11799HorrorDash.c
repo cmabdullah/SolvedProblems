@@ -9,20 +9,18 @@
  */
 
 #include <stdio.h>
-
-
 int main(void) {
-	int i,j=1,hi,n,arr[100], T;
-	scanf("%d", &T);
+	int i,j=1,hi,n,arr[100],T;
+	scanf("%d",&T);
 	while(T--){
-		scanf("%d", &n);
-		for(i = 0; i<n;i++){
-			scanf("%d", &arr[i]);
+		scanf("%d",&n);
+		for(i=0;i<n;i++){
+			scanf("%d",&arr[i]);
 		}
 		hi = arr[0];
-		for (i = 0;i<n-1;i++){
+		for (i=0;i<n-1;i++){
 			if (hi<arr[i+1]){
-				hi = arr[i+1];
+				hi=arr[i+1];
 			}
 		}
 		printf("Case %d: %d\n", j, hi);

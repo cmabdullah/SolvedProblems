@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Uva27_11679SubPrime.c
+ Name        : Uva29_11799HorrorDash.c
  Author      : AbdullahKhan
  Version     :
  Copyright   : OpenSource
@@ -9,9 +9,24 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
+
 
 int main(void) {
-	puts("underconstrution"); /* prints 11799_HorrorDash */
-	return EXIT_SUCCESS;
+	int i,j=1,hi,n,arr[100], T;
+	scanf("%d", &T);
+	while(T--){
+		scanf("%d", &n);
+		for(i = 0; i<n;i++){
+			scanf("%d", &arr[i]);
+		}
+		hi = arr[0];
+		for (i = 0;i<n-1;i++){
+			if (hi<arr[i+1]){
+				hi = arr[i+1];
+			}
+		}
+		printf("Case %d: %d\n", j, hi);
+		j++;
+	}
+	return 0;
 }

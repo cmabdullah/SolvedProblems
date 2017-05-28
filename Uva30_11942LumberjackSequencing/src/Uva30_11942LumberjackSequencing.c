@@ -9,10 +9,10 @@
  */
 #include <stdio.h>
 int main(){
-    int t,n,max,min,maxflag,minflag;
-    scanf("%d",&t);
+    int T,n,max,min,maxflag,minflag;
+    scanf("%d",&T);
     printf("Lumberjacks:\n");
-    while (t--){
+    while (T--){
         max=100;
         min=0;
         maxflag=1;

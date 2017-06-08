@@ -9,16 +9,19 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 int main(void) {
 	char song[100][100]= { "Happy", "birthday", "to", "you", "Happy", "birthday", "to", "you", "Happy", "birthday", "to", "Rujia", "Happy", "birthday", "to", "you"};
 	char val[100][100];
+	float v;
 	int n,i,key, ptr = 0, count = 0;
 	scanf("%d", &n);
 	for (i = 0; i<n ; i++){
 		scanf("%s",&val[i]);
 	}
 	if (n>10){
-		key = (int)ceil(n/16)+1;
+		v = ceil(n/16)+1;
+		key = (int)v ;
 	}
 	else{
 		key = 1;

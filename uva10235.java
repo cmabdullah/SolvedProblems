@@ -1,33 +1,45 @@
 package uva10235;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.util.Scanner;
-public class Uva10235 {
-    public static void main(String[] args) throws IOException {
-        Scanner x = new Scanner(System.in);
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String u;
-        while ( (u = br.readLine()) != null ) {
-            BigInteger bi1  = new BigInteger(u);
-            if (bi1.isProbablePrime(1) == true){
-
-                StringBuilder obj1 = new StringBuilder(u);
-                String v = obj1.reverse().toString(); //71
-                BigInteger b = new BigInteger(v);
-                if (b.isProbablePrime(1) == true){
-                    System.out.println(u+" is emirp.");
-                }
-                else{
-                    System.out.println(u+" is prime.");
-                }
-            }
-            else{
-                System.out.println(u+" is not prime.");
-            }
-            u = null;
+import java.util.Vector;
+ 
+class Uva10235{
+        public static boolean isPrime(String n){
+        boolean flag=true;
+        boolean a  = new BigInteger(n).isProbablePrime(10);
+        if (a != true){
+            flag=false;
+            return flag;
+        }
+        return flag;
+    }
+    public static void main(String args[]){
+        Scanner x=new Scanner(System.in);
+        while(x.hasNext()){
+            String n=x.next();
+            String r  = new StringBuilder(n).reverse().toString();
+            if(isPrime(n) && isPrime(r) && !n.equals(r))System.out.println(n+" is emirp.");
+            else if(isPrime(n))System.out.println(n+" is prime.");
+            else System.out.println(n+" is not prime.");
         }
     }
 }
+/**
+ package cm;
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Cm {
+    public static void main(String[] args) {
+        Scanner x=new Scanner(System.in);
+        while ( x.hasNext() ) {
+            String u = x.next();
+            boolean a  = new BigInteger(u).isProbablePrime(10);
+            String v  = new StringBuilder(u).reverse().toString();
+            boolean b  = new BigInteger(v).isProbablePrime(10);
+            if (a == true &&  b== true && !u.equals(v)) System.out.println(u+" is emirp.");
+            else if(a == true) System.out.println(u+" is prime.");
+            else System.out.println(u+" not prime.");
+        }
+    }
+}
+ **/

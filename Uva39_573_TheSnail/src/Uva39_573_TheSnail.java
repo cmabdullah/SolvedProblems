@@ -15,6 +15,9 @@ public class Uva39_573_TheSnail {
 		U = 2;
 		D = 1;
 		F = 50;
+		
+		
+		
 		double DayInitial = 0,	HeightDistance = 0,ClimbedHeightAfter ;
 		double ClimbingHeight	,AfterSliding ;
 		

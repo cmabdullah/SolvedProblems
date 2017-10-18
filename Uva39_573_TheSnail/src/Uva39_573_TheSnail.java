@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Uva39_573_TheSnail {
 /****
@@ -9,61 +10,43 @@ public class Uva39_573_TheSnail {
  * */
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		double H,U,D,F;
-		H = 10;
-		U = 2;
-		D = 1;
-		F = 50;
-		
-		
-		
-		double DayInitial = 0,	HeightDistance = 0,ClimbedHeightAfter ;
-		double ClimbingHeight	,AfterSliding ;
-		
-		Uva39_573_TheSnail obj = new Uva39_573_TheSnail(U,F);
-		System.out.println(obj.result);
-		int i = 1;
-		ClimbedHeightAfter = U ;
-		ClimbingHeight = U;
-		
-		
-		
-			while ( i != 0) {
-				DayInitial = i;
-				U = U-obj.result;
-				
-				
-				ClimbedHeightAfter = U ;
-				
-				
-				
-				AfterSliding = ClimbingHeight - D;
-				HeightDistance = AfterSliding;
-				
-				ClimbingHeight = ClimbedHeightAfter+HeightDistance;
-				i++;
-				if (ClimbingHeight> H) {
-					break ;
-				}
-				
-			}
-		
-		
-		System.out.println(i);
+        Scanner obj = new Scanner(System.in);
+        StringBuffer s = new StringBuffer();
+        while(true){
+        	double H,U,D,F;
+        	double d= 0;
+        long days = 0;
+            H = obj.nextInt();
+            U = obj.nextInt(); 
+            	D = obj.nextInt();
+            	F = obj.nextInt();
+            if(H==0&&U==H&&D==0&&F==0){
+            	break;
+            	}
+            F = (U*F)/100.0;
+            while(true){
+                days++;
+
+                if(U>=0){
+                d+= U;
+                }
+                if(d>H){
+                	break;
+                	}
+                d-= D;
+                if(d<0){
+                	break;
+                	}
+                U-= F;
+            }
+	        if(d>=0){
+	        	s.append("success on day "+days).append('\n');
+	        	}
+	        else{
+	        	s.append("failure on day " + days).append('\n');
+	        	}
+        }
+        System.out.println(s.toString());
 
 	}
-	
-	double U,F, result;
-	Uva39_573_TheSnail(double U,double F){
-		this.U = U;
-		this.F = F;
-		percentage(U,F);
-	}
-	double percentage(double i,double j) {
-		double v = 100;
-		result = (i*j)/v ;
-		return result;
-	}
-
 }

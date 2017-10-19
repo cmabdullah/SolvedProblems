@@ -16,13 +16,13 @@ public class Uva39_573_TheSnail {
         F = obj.nextInt();
         if(H==0)
         	break;
-        decrease = U*((U*F)/100.0) ;
+        decrease = U*(F*1.0/100.0) ;
 
 	        while(current <= H && (first || current >= 0)){
 	        		days++;
 	        		current = current+U;
 	           	if(current > H)break;
-	           	current = current=D;
+	           	current = current-D;
 	           	U = U-decrease;
 	           	U = Math.max(U, 0);
 	           	first = false;
@@ -31,10 +31,9 @@ public class Uva39_573_TheSnail {
             s.println("failure on day " + days);
         else
             s.println("success on day " + days);
-        s.flush();
+       s.flush();
         }
-        s.close();
-        obj.close();
-        
+        //s.close();
+       // obj.close();
 	}
 }

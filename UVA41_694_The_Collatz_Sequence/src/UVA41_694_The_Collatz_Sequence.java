@@ -18,7 +18,8 @@ public class UVA41_694_The_Collatz_Sequence {
 					x = x/2;
 				else 
 					x = 3*x +1;
-				if(x >L)break;
+				if(x >L)
+					break;
 				count++;
 			}
 			System.out.println("Case "+i+": A = "+A+", limit = "+L+", number of terms = "+count);

@@ -7,6 +7,7 @@
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 100
@@ -18,15 +19,15 @@ void pop();
 void display();
 int main(void) {
 	puts("Enter an string : ");
-	scanf("%s", &input);
+	scanf("%s", &input);//q1
 	//printf("Input string is : %s\n", input);
 	il = strlen(input);
-	//printf("Input string length is : %d\n", il);
+	//printf("Input string length is : %d\n", il);  abc#cba
 	push();
 	display();
 	//printf("stack length is : %d\n", sl);
 }
-void push(){
+void push(){//q2
 	while ( i<MAX ){
 		if (input[i]=='#'){
 			flag = i;
@@ -37,12 +38,12 @@ void push(){
 		i++;
 	}
 }
-void pop(){
+void pop(){//q3
 	sl = strlen(stack);
 	j = flag+1;
 	while ( j< il){
 		if (stack[sl-1] != input[j])
-			break;
+			break;//q4
 		stack[sl-1]= '\0';
 		sl--;
 		j++;

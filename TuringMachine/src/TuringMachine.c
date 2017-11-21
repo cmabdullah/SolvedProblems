@@ -178,3 +178,50 @@ void Reject(){
 
 
 **/
+
+#include <stdio.h>
+char inp[20] = "000111";
+int state = 0, head = 0;
+int main(){
+    while(1){
+        if (state == 0 && inp[head] == '0'){
+            inp[head] = 'x';
+            state = 1; //move right
+            head++;
+            printf("input : %s head : %d\n",inp,head);
+        }
+        else if (state == 1 && (inp[head] == '0' || inp[head]== 'y')){
+            //printf("Show\n");
+            state = 1;
+            //printf("\n\nState : %d",state);
+            while(inp[head] != '1'){
+                head++;
+            }
+            printf("\n\nHEAD : %d",head);
+
+        }
+        else if (state == 1 && inp[head] == '1'){
+
+            inp[head] = 'y';
+            printf("\n\last Input  : %s",inp);
+            state = 2;
+            head--;
+            printf("\n\n Current HEAD : %d",head);
+        }
+        else if (state == 2 && (inp[head]=='0' || inp[head]=='0')){
+            while(inp[head] != 'x'){
+                head--;//move left
+                state = 2;
+                printf("\n\n State 2 HEAD : %d",head);
+            }
+        }
+        else if (state == 2 && inp[head]=='x'){
+            head++;
+            state = 0;
+
+            printf("\n\n State 2 HEAD Update : %d, inp %s",head, inp);
+        }
+        else
+            break;
+    }
+}

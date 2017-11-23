@@ -7,48 +7,67 @@
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
+//time ./a.out
+#include<stdio.h>
+char inp[20];
+int state = 0, head = 0;
+int main(){
+    scanf("%s",&inp);
+    while(1){
+        if (state == 0 && inp[head] == '0'){
+            inp[head] = 'x';
+            state = 1; //move right
+            head++;
+        }
+        else if (state == 1 && (inp[head] == '0' || inp[head]== 'y')){
+            if(inp[head]=='0')
+                inp[head]='0';
+            else if (inp[head] == 'y')
+                inp[head] = 'y' ;
+            state = 1;
+            if(inp[head] != '1')
+                head++;
+        }
+        else if (state == 1 && inp[head] == '1'){
+            inp[head] = 'y';
+            state = 2;
+            head--;
+        }
+        else if (state == 2 && (inp[head]=='0' || inp[head]=='y')){
+            if(inp[head] != 'x'){
 
-#include <stdio.h>
-#include <stdlib.h>
-#define MAX 100
-#define EOS '\0'
-char input[MAX],stack[MAX];
-int i= 0,j,k = 0,flag,sl,il;
-void push();
-void pop();
-void display();
-int main(void) {
-	puts("Enter an string : ");
-	scanf("%s", &input);//q1
-	//printf("Input string is : %s\n", input);
-	il = strlen(input);
-	//printf("Input string length is : %d\n", il);  abc#cba
-	push();
-	display();
-	//printf("stack length is : %d\n", sl);
-}
-void push(){//q2
-	while ( i<MAX ){
-		if (input[i]=='#'){
-			flag = i;
-			pop();
-			break;
-		}
-		stack[i]=input[i];
-		i++;
-	}
-}
-void pop(){//q3
-	sl = strlen(stack);
-	j = flag+1;
-	while ( j< il){
-		if (stack[sl-1] != input[j])
-			break;//q4
-		stack[sl-1]= '\0';
-		sl--;
-		j++;
-	}
-}
-void display(){
-	(stack[0]== EOS) ? printf("Accept\n") : printf("reject \n") ;
+                if(inp[head] =='0')
+                    inp[head]= '0';
+                else if(inp[head] == 'y')
+                    inp[head]='y';
+                head--;//move left
+                state = 2;
+            }
+        }
+        else if(state == 2 && inp[head]=='x'){
+                inp[head] = 'x';
+             head++;
+            state = 0;
+        }
+        else if(state ==0 && inp[head] == 'y'){
+            state = 3;// move right
+            head++;
+        }
+        else if(state ==3&&inp[head]=='y'){
+            if(inp[head]   == 'y')
+                head++;
+            if(inp[head]=='\0')
+                state = 4;
+                //break;
+        }
+        else if(state ==4&&inp[head]=='\0'){
+            printf("Accept\n");
+            break;
+        }
+        else{
+                printf("Reject\n");
+            break;
+        }
+    }// while loooop end
+return 0;
 }

@@ -96,13 +96,13 @@ int TOS= -1;
 char stack[100];
 char input[100];
 char inp;
-int state = 1 , flag=0;;
+int state = 1 , i=0;
 int pop(void);
 void push(char x);
 int main(){
     scanf("%s",input);
     while(1){
-    	inp=input[flag];
+    	inp=input[i];
         if(state==1) {
         	state=2;
             push('$');
@@ -149,7 +149,7 @@ int main(){
         		printf("Rejected\n");
             break;
         }
-        flag++;
+        i++;
     }// whle loop
     return  0;
 }

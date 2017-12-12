@@ -15,6 +15,6 @@ start:
 
 section .data
 str:
-  db `Hello, C M\n`
+  db `Hello00, C M\n`
 strlen equ $ - str
 

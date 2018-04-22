@@ -11,13 +11,11 @@ public class Main {
 			BigInteger X = new BigInteger(input);
 			if (X.equals(BigInteger.ZERO))
 				break;
-				
-				
+
 			if (X.mod(eleven).equals(BigInteger.ZERO))
 				System.out.println(input +" is a multiple of 11." );
 			else
 				System.out.println(input +" is not a multiple of 11.");
-			input = s.next();
 		}
 	}
 }

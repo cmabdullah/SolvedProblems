@@ -1,14 +1,14 @@
 
 
-1. UVA1_12372
-2. UVA2_10071
-3. UVA3_11727
-4. UVA4_p10370
-5. UVA5_p12015
-6. UVA_1124Celebrityjeopardy
-7. UVA7_p488TriangularWave
-8. UVA8_575SkewBinary
-9. UVA9_11152ColourfulFlowers
+01. UVA1_12372
+02. UVA2_10071
+03. UVA3_11727
+04. UVA4_p10370
+05. UVA5_p12015
+06. UVA_1124Celebrityjeopardy
+07. UVA7_p488TriangularWave
+08. UVA8_575SkewBinary
+09. UVA9_11152ColourfulFlowers
 10. UVA10_11635HotelBooking
 11. UVA11_11364Parking
 12. UVA12_10550CombinationLock
@@ -47,9 +47,9 @@
 45. UVa_45_151_Power_Crisis
 46. UVa46_621_Secret_Research
 47. UVa_47_10055HashmatTheBraveWarrior
-48. 
-49. 
-50. 
+48. UVa48_10473SimpleBaseConversion
+49. UVa49_10929YouCanSay_11
+50. UVa_50_10924PrimeWords
 
 
 

@@ -12,3 +12,4 @@
 *.cproject
 *.settings
 *.out
+*.DS_Store

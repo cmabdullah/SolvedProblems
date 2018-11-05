@@ -80,4 +80,22 @@ public class UVa43_10107_WhatIsTheMedian {
 }
 ```
 
+# EOF
+
+```java
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String i ;
+		while (scan.hasNext()) {
+			i = scan.nextLine();
+			System.out.println(i + " ");
+			
+		}
+	}
+}
+```
 
